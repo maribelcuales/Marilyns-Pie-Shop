@@ -9,3 +9,6 @@ let router = express.Router();
 router.get('/', function(req, res, next) {
   res.send("Apple");
 });
+
+// Configure router so all routes are prefixed with /api/v1
+app.use('/api/', router); 
