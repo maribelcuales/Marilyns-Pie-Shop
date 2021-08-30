@@ -3,11 +3,17 @@ let express = require('express');
 let app = express(); 
 
 // Use the express Router object 
-let router = express.Router();  
+let router = express.Router(); 
+// Create an array of pie objects 
+let pies = [
+  { "id": 1, "name": "Apple" },
+  { "id": 2, "name": "Cherry"},
+  { "id": 3, "name": "Peach" }, 
+];
 
 // Create GET to return a list of all pies
 router.get('/', function(req, res, next) {
-  res.send("Apple");
+  res.send(pies);
 });
 
 // Configure router so all routes are prefixed with /api/v1
