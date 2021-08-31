@@ -5,16 +5,18 @@ let pieRepo = require('./repos/pieRepo');
 
 // Use the express Router object 
 let router = express.Router(); 
-let pies = pieRepo.get(); 
 
 // Create GET to return a list of all pies
-router.get('/', function(req, res, next) {
-  //res.status(200).send(pies);
-  res.status(200).json({
-    "status": 200,
-    "statusText": "OK",
-    "message": "All pies retrieved.",
-    "data": pies,
+router.get('/', function (req, res, next) {
+  pieRepo.get(function (data) {
+    res.status(200).json({
+      "status": 200,
+      "statusText": "OK",
+      "message": "All pies retrieved.",
+      "data": pies,
+    });
+  }, function(err) {
+    next(err);
   });
 });
 
