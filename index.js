@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
       "status": 200,
       "statusText": "OK",
       "message": "All pies retrieved.",
-      "data": pies,
+      "data": data
     });
   }, function(err) {
     next(err);
