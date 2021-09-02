@@ -46,13 +46,5 @@
     "slicePrice": 5.99,
     "sliceCalories": 67,
     "imageUrl": "images/pecan.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Mango",
-    "wholePrice": 20.99,
-    "slicePrice": 5.19,
-    "sliceCalories": 70,
-    "imageUrl": "images/mango.jpg"
   }
 ]
